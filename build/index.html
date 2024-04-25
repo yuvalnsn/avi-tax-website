@@ -4,40 +4,57 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/node_modules/alpinejs/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
 
-    <link href="/dist/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <title>אבי לוי משרד יועצי מס</title>
-    <link rel="icon" href="AviLevi_Logo2.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="AviLevi_Logo2.ico" type="image/x-icon">
+    <link rel="icon" href="assets/AviLevi_Logo2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/AviLevi_Logo2.ico" type="image/x-icon">
 
     <style>
-        @font-face {
-            font-family: 'YourCustomFontName';
-            src: url('/TelAviv-BrutalistBold.woff2') format('woff2')
-            /* Add more src declarations for different font formats if needed */
+        @property --num {
+            syntax: '<integer>';
+            initial-value: 0;
+            inherits: false;
+        }
+        @keyframes counter1 {
+            from {
+                --num: 0;
+            }
+            to {
+                --num: 200;
+            }
         }
 
-        /* Define font for paragraphs */
-        @font-face {
-            font-family: 'ParagraphFont';
-            src: url('/TelAviv-ModernistRegular.woff2') format('woff2')
+        @keyframes counter2 {
+            from {
+                --num: 0;
+            }
+            to {
+                --num: 27;
+            }
         }
 
-        p, span, a, div {
-            font-family: 'ParagraphFont', sans-serif;
+        @keyframes counter3 {
+            from {
+                --num: 0;
+            }
+            to {
+                --num: 100;
+            }
         }
 
-        /* Apply fonts to specific elements */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'YourCustomFontName', sans-serif;
+        .text-center {
+            text-align: center; /* Center-align the content */
         }
 
-        html {
-            scroll-behavior: smooth;
+        .custom-h6,
+        .custom-span {
+            display: inline-block; /* or inline, or inline-flex */
+            vertical-align: middle; /* Align vertically if needed */
+            margin-left: 1px; /* Adjust margin as needed */
         }
-
     </style>
 </head>
 
@@ -49,7 +66,7 @@
         <div class="container px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center">
             <div class="flex items-center justify-between">
                 <a href="#">
-                    <img class="w-auto h-20 sm:h-20" src="AviLevi_Logo.png" alt="">
+                    <img class="w-auto h-20 sm:h-20" src="assets/AviLevi_Logo.png" alt="">
                 </a>
 
                 <!-- Mobile menu button -->
@@ -156,7 +173,7 @@
         </div>
 
         <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
-            <img class="object-cover w-full h-full max-w-2xl rounded-md" src="47.jpg" alt="glasses photo">
+            <img class="object-cover w-full h-full max-w-2xl rounded-md" src="assets/47.jpg" alt="glasses photo">
         </div>
     </div>
 </header>
@@ -167,7 +184,7 @@
     <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
         <div class="flex justify-center xl:w-1/2">
             <img class="h-70 w-70 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full"
-                 src="avi-portrait.jpg" alt="">
+                 src="assets/avi-portrait.jpg" alt="">
         </div>
 
         <div class="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0">
@@ -410,20 +427,31 @@
     <div class="container">
         <div class="grid grid-cols-1 row-gap-8 md:grid-cols-3">
             <div class="text-center">
-                <h6 class="lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl">+200</h6>
+                <h6 class="custom-span lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl">+</h6>
+                <h6 class="lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl animate-[counter1_3s_ease-out_forwards] [counter-set:_num_var(--num)] before:content-[counter(num)] custom-h6">
+                    <!-- Your content here -->
+                </h6>
+
                 <p class="text-sm font-medium tracking-widest uppercase lg:text-base">
                     עצמאיים וחברות
                 </p>
             </div>
+
             <div class="text-center border-r">
-                <h6 class="mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl">27</h6>
+
+                <h6 class="lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl animate-[counter2_3s_ease-out_forwards] [counter-set:_num_var(--num)] before:content-[counter(num)] custom-h6">
+                    <!-- Your content here -->
+                </h6>
                 <p class="text-sm font-medium tracking-widest uppercase lg:text-base">
                     שנות ניסיון
                 </p>
             </div>
 
             <div class="text-center border-r">
-                <h6 class="mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl">100%</h6>
+                <h6 class="custom-span lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl">%</h6>
+                <h6 class="lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl animate-[counter3_3s_ease-out_forwards] [counter-set:_num_var(--num)] before:content-[counter(num)] custom-h6">
+                    <!-- Your content here -->
+                </h6>
                 <p class="text-sm font-medium tracking-widest uppercase lg:text-base">
                     צמיחה עסקית
                 </p>
@@ -543,7 +571,6 @@
 
         <div class="flex -mx-2">
 
-
             <a href="https://www.facebook.com/profile.php?id=100057335564667"
                class="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                aria-label="Facebook">
@@ -561,7 +588,7 @@
         <p class="text-sm text-white dark:text-gray-300"> כל הזכויות שמורות אבי לוי משרד יועצי מס בע״מ ©2024</p>
 
         <a href="#">
-            <img class="w-auto h-20" src="avi%20logo%20white.png" alt="">
+            <img class="w-auto h-20" src="/assets/avilogowhite.png" alt="">
         </a>
     </div>
 </footer>

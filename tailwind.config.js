@@ -18,4 +18,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  content: ["./build/*.html", "./build/js/*.js"],
 };
