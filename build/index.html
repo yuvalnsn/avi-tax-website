@@ -11,6 +11,7 @@
     <title>אבי לוי משרד יועצי מס</title>
     <link rel="icon" href="assets/AviLevi_Logo2.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/AviLevi_Logo2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/in-viewport/0.5.0/in-viewport.min.css">
 
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="אבי לוי משרד יועצי מס">
@@ -29,7 +30,7 @@
                 --num: 0;
             }
             to {
-                --num: 200;
+                --num: 300;
             }
         }
 
@@ -383,7 +384,7 @@
         <div class="grid grid-cols-1 row-gap-8 md:grid-cols-3">
             <div class="text-center">
                 <h6 class="custom-span lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl">+</h6>
-                <h6 class="lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl animate-[counter1_3s_ease-out_forwards] [counter-set:_num_var(--num)] before:content-[counter(num)] custom-h6">
+                <h6  id="animatedElement" class="lg:mt-5 text-4xl font-bold lg:text-5xl xl:text-6xl animate-[counter1_3s_ease-out_forwards] [counter-set:_num_var(--num)] before:content-[counter(num)] custom-h6">
                     <!-- Your content here -->
                 </h6>
 
@@ -547,6 +548,33 @@
         </a>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/in-viewport/0.5.0/in-viewport.min.js"></script>
+<script>
+    const animatedElement = document.getElementById('animatedElement');
+
+    // Intersection Observer configuration
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger animation when 10% of the element is visible
+    };
+
+    // Callback function to handle intersection
+    const handleIntersection = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animatedElement.classList.add('animate-counter');
+                observer.unobserve(entry.target); // Stop observing once animation is triggered
+            }
+        });
+    };
+
+    // Create Intersection Observer instance
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    // Start observing the target element
+    observer.observe(animatedElement);
+</script>
 <script>
     document.querySelectorAll('.toggle-button').forEach(button => {
         button.addEventListener('click', function () {
