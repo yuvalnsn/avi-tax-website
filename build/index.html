@@ -62,11 +62,11 @@
 
 <header class="bg-white dark:bg-gray-900">
     <!--    navbar-->
-    <nav x-data="{ isOpen: false }" class="border-b bg-greyNew dark:border-gray-700">
+    <nav x-data="{ isOpen: false }" class="border-b dark:border-gray-700">
         <div class="container px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center">
             <div class="flex items-center justify-between">
                 <a href="#">
-                    <img class="w-auto h-20 sm:h-20" src="assets/avilogowhite.png" alt="">
+                    <img class="w-auto h-20 sm:h-20" src="assets/AviLevi_Logo.png" alt="">
                 </a>
 
                 <!-- Mobile menu button -->
@@ -91,16 +91,16 @@
             <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0']"
                  class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
                 <div class="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-y-0 lg:-px-8">
-                    <a class="block font-medium text-white dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
                        href="#about">אודות</a>
-                    <a class="block font-medium text-white dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
                        href="#services">שירותים</a>
                     <a href="#contact"
-                       class="block font-medium text-white dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
+                       class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
                     >צרו קשר</a>
 
                     <a href="tel:03-5375070">
-                        <button class="flex items-center justify-center px-5 py-2 text-sm font-medium tracking-wide text-center text-greyNew capitalize transition-colors duration-300 transform bg-white rounded-lg hover:bg-gray-600 focus:outline-none focus:bg-gray-600 font-custom">
+                        <button class="flex items-center justify-center px-5 py-2 text-sm font-medium tracking-wide text-center text-white capitalize transition-colors duration-300 transform bg-gray-700 rounded-lg hover:bg-gray-600 focus:outline-none focus:bg-gray-600 font-custom">
                             03-5375070
                         </button>
                     </a>
@@ -110,71 +110,16 @@
         </div>
     </nav>
     <!--hero-->
-    <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-        <div class="w-full lg:w-1/2">
-            <div class="lg:max-w-lg">
-                <h1 class="text-3xl font-semibold tracking-wide text-gray-800 dark:text-white lg:text-4xl">ברוכים הבאים
-                    לאבי לוי משרד יועצי מס</h1>
-                <p class="mt-4 text-gray-600 dark:text-gray-300">שירותי מס מקצועיים ואישיים לצמיחה והתפתחות עסקית.</p>
-                <div class="grid gap-6 mt-8 sm:grid-cols-2">
-                    <div class="flex items-center text-gray-800 -px-3 dark:text-gray-200">
-                        <svg class="w-5 h-5 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-
-                        <span class="mx-3">הנהלת חשבונות</span>
-                    </div>
-                    <div class="flex items-center text-gray-800 -px-3 dark:text-gray-200">
-                        <svg class="w-5 h-5 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-
-                        <span class="mx-3">דוחות שנתיים</span>
-                    </div>
-                    <div class="flex items-center text-gray-800 -px-3 dark:text-gray-200">
-                        <svg class="w-5 h-5 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-
-                        <span class="mx-3">חשבות שכר</span>
-                    </div>
-
-
-                    <div class="flex items-center text-gray-800 -px-3 dark:text-gray-200">
-                        <svg class="w-5 h-5 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-
-                        <span class="mx-3">הצהרות הון</span>
-                    </div>
-
-                    <div class="flex items-center text-gray-800 -px-3 dark:text-gray-200">
-                        <svg class="w-5 h-5 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-
-                        <span class="mx-3">החזרי מס לשכירים</span>
-                    </div>
-                    <div class="flex items-center text-gray-800 -px-3 dark:text-gray-200">
-                        <svg class="w-5 h-5 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-
-                        <span class="mx-3">ייעוץ וליווי עסקי</span>
-                    </div>
-                </div>
+    <div class="w-full bg-center bg-cover h-[38rem]" style="background-image: url('/build/assets/47.jpg');">
+        <div class="flex items-center justify-center w-full h-full bg-gray-900/40">
+            <div class="text-center">
+                <h1 class="text-3xl font-semibold text-greyNew lg:text-4xl">אבי לוי <span class="text-white">משרד יועצי מס</span> </h1>
+                <button class="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Start project</button>
             </div>
         </div>
+    </div>
 
-        <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
-            <img class="object-cover w-full h-full max-w-2xl rounded-md" src="assets/47.jpg" alt="glasses photo">
-        </div>
+
     </div>
 </header>
 
@@ -588,7 +533,7 @@
         <p class="text-sm text-white dark:text-gray-300"> כל הזכויות שמורות אבי לוי משרד יועצי מס בע״מ ©2024</p>
 
         <a href="#">
-            <img class="w-auto h-20" src="assets/avilogowhite.png" alt="">
+            <img class="w-auto h-20" src="/assets/avilogowhite.png" alt="">
         </a>
     </div>
 </footer>
