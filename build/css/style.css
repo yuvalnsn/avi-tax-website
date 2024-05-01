@@ -1213,6 +1213,11 @@ html {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-yellowNew:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 230 0 / var(--tw-bg-opacity));
+}
+
 .hover\:text-blue-500:hover {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -1231,6 +1236,11 @@ html {
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.hover\:text-greyNew:hover {
+  --tw-text-opacity: 1;
+  color: rgb(47 46 56 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
