@@ -1,0 +1,269 @@
+/* ---------------------------------------------------------- */
+/* 1. Basic resets, fonts, and custom properties */
+/* ---------------------------------------------------------- */
+
+/* Tailwind base or other resets can go here if needed */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font definitions (example paths) */
+@font-face {
+    font-family: 'YourCustomFontName';
+    src: url('/src/assets/bb.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ParagraphFont';
+    src: url('/src/assets/mr.woff2') format('woff2');
+}
+
+/* להוסיף ל-CSS */
+:focus-visible {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.highlight-links a {
+    border: 2px solid #0053a5 !important;
+    padding: 2px 4px !important;
+    border-radius: 4px !important;
+    background-color: #f0f8ff !important;
+    text-decoration: underline !important;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Apply fonts to headings and body text */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'YourCustomFontName', sans-serif;
+}
+
+p, span, a, div {
+    font-family: 'ParagraphFont', sans-serif;
+}
+
+/* Example color variables (optional) */
+:root {
+    --primary-color: #0053a5;
+    --text-color: #333333;
+    --background-color: #ffffff;
+    --link-color: #0066cc;
+}
+
+/* הוספה לקובץ CSS הקיים */
+.high-contrast {
+    /* צבעי בסיס */
+    --bg-color: #000000;
+    --text-color: #FFFFFF;
+    --link-color: #FFFF00;
+    --border-color: #FFFFFF;
+    --button-bg: #FFFFFF;
+    --button-text: #000000;
+}
+
+/* כשהקלאס high-contrast מופעל, כל האלמנטים יקבלו את הצבעים החדשים */
+.high-contrast {
+    --bg-color: #000000;
+    --text-color: #FFFFFF;
+    --link-color: #00FF00; /* ירוק בהיר יותר לניגודיות טובה יותר */
+    --border-color: #FFFFFF;
+    --button-bg: #FFFFFF;
+    --button-text: #000000;
+    --focus-color: #FF0000; /* צבע focus בולט יותר */
+}
+
+.high-contrast :focus {
+    outline-color: var(--focus-color) !important;
+}
+
+.high-contrast nav,
+.high-contrast header,
+.high-contrast footer,
+.high-contrast section,
+.high-contrast div {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.high-contrast a {
+    color: var(--link-color) !important;
+}
+
+.high-contrast button,
+.high-contrast .accessibility-button {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text) !important;
+    border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast img,
+.high-contrast .logo {
+    filter: grayscale(100%) contrast(120%) !important;
+}
+
+.high-contrast .accessibility-menu {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast svg {
+    fill: var(--text-color) !important;
+    stroke: var(--text-color) !important;
+}
+
+/* Enhance focus visibility */
+:focus,
+:focus-visible {
+    outline: 3px solid #4A90E2 !important;
+    outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------- */
+/* 2. Skip link */
+/* ---------------------------------------------------------- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ---------------------------------------------------------- */
+/* 3. Accessibility menu styles */
+/* ---------------------------------------------------------- */
+.accessibility-menu {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    z-index: 1000;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accessibility-button {
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    z-index: 999;
+    padding: 10px;
+    background: #0053a5; /* Ensure sufficient contrast with text */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------------- */
+/* 4. Hero Section (example classes) */
+/* ---------------------------------------------------------- */
+.hero-section {
+    background-image: url('assets/47.jpg');
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-button {
+    background-color: #4a4a4a; /* adjust as needed */
+    /* e.g., tailwind classes:
+       bg-gray-700 hover:bg-yellow-400 hover:text-gray-800 ...
+    */
+}
+
+/* ---------------------------------------------------------- */
+/* 5. Animations for counters */
+/* ---------------------------------------------------------- */
+@property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes counter1 {
+    from {
+        --num: 0;
+    }
+    to {
+        --num: 300;
+    }
+}
+
+@keyframes counter2 {
+    from {
+        --num: 0;
+    }
+    to {
+        --num: 27;
+    }
+}
+
+@keyframes counter3 {
+    from {
+        --num: 0;
+    }
+    to {
+        --num: 100;
+    }
+}
+
+/* If you want separate classes for each stat:
+   .animate-counter1 { animation: counter1 3s ease-out forwards; }
+   .animate-counter2 { animation: counter2 3s ease-out forwards; }
+   .animate-counter3 { animation: counter3 3s ease-out forwards; }
+*/
+
+/* For improving line spacing if desired */
+.improved-readability {
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
+}
+
+/* Example styling for ellipses + toggle hidden text */
+.ellipsis {
+    display: inline; /* visible until toggled off */
+}
+
+.toggle-text {
+    display: none; /* hidden by default */
+}
+
+/* 
+  Adjust everything as needed to match your design 
+  or remove if you're already using Tailwind 
+  utility classes for layout.
+*/
+/* Add to your CSS */
+.keyboard-user *:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
