@@ -1,318 +1,365 @@
 <!doctype html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>הצהרת נגישות - אבי לוי משרד יועצי מס</title>
-  <!-- Add Alpine.js before other scripts -->
-  <script
-          defer
-          src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"
-  ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-  <link href="css/style.css" rel="stylesheet"/>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>הצהרת נגישות - אבי לוי משרד יועצי מס</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-  <link href="css/style.css" rel="stylesheet"/>
-</head>
-<body class="min-h-screen bg-gray-50">
-<div class="skip-links">
-  <a href="index.html#about" class="skip-link">דלג לאודות</a>
-  <a href="index.html#services" class="skip-link">דלג לשירותים</a>
-  <a href="index.html#contact" class="skip-link">דלג ליצירת קשר</a>
-  <a href="index.html" class="skip-link">דלג לעמוד הבית</a>
-</div>
-<main class="container mx-auto px-4 py-12 max-w-4xl">
-  <header class="mb-12 text-center">
-
-
-    <nav
-            x-data="{ isOpen: false }"
-            class="border-b dark:border-gray-700"
-            role="navigation"
-            aria-label="תפריט ראשי"
-    >
-      <div
-              class="container px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center"
-      >
-        <div class="flex items-center justify-between">
-          <a href="index.html#">
-            <img
-                    class="w-auto h-20 sm:h-20"
-                    src="assets/AviLevi_Logo.png"
-                    alt="לוגו משרד יועצי מס אבי לוי - שם המשרד בכתב מעוצב על רקע לבן"
-            />
-          </a>
-
-          <!-- Mobile menu button -->
-          <div class="flex lg:hidden">
-            <button
-                    x-cloak
-                    @click="isOpen = !isOpen"
-                    type="button"
-                    class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
-                    aria-label="פתח תפריט"
-            >
-              <svg
-                      x-show="!isOpen"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-6 h-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-              >
-                <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M4 8h16M4 16h16"
-                />
-              </svg>
-
-              <svg
-                      x-show="isOpen"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-6 h-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-              >
-                <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <div
-                x-cloak
-                :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0']"
-                class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>הצהרת נגישות - אבי לוי משרד יועצי מס</title>
+    <!-- Add Alpine.js before other scripts -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>הצהרת נגישות - אבי לוי משרד יועצי מס</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <div class="skip-links">
+      <a href="index.html#about" class="skip-link">דלג לאודות</a>
+      <a href="index.html#services" class="skip-link">דלג לשירותים</a>
+      <a href="index.html#contact" class="skip-link">דלג ליצירת קשר</a>
+      <a href="index.html" class="skip-link">דלג לעמוד הבית</a>
+    </div>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <header class="mb-12 text-center">
+        <nav
+          x-data="{ isOpen: false }"
+          class="border-b dark:border-gray-700"
+          role="navigation"
+          aria-label="תפריט ראשי"
         >
           <div
-                  class="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-y-0 lg:-px-8"
+            class="container px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center"
           >
-            <a
-                    class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
-                    href="index.html#about"
-            >אודות</a
-            >
-            <a
-                    class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
-                    href="index.html#services"
-            >שירותים</a
-            >
-            <a
-                    href="index.html#contact"
-                    class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
-            >צרו קשר</a
-            >
+            <div class="flex items-center justify-between">
+              <a href="index.html#">
+                <img
+                  class="w-auto h-20 sm:h-20"
+                  src="assets/AviLevi_Logo.png"
+                  alt="לוגו משרד יועצי מס אבי לוי - שם המשרד בכתב מעוצב על רקע לבן"
+                />
+              </a>
 
-            <a href="tel:03-5375070">
-              <button
-                      class="flex items-center justify-center px-5 py-2 text-sm font-medium tracking-wide text-center text-white capitalize transition-colors duration-300 transform bg-gray-700 rounded-lg hover:bg-gray-600 focus:outline-none focus:bg-gray-600 font-custom"
+              <!-- Mobile menu button -->
+              <div class="flex lg:hidden">
+                <button
+                  x-cloak
+                  @click="isOpen = !isOpen"
+                  type="button"
+                  class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                  aria-label="פתח תפריט"
+                >
+                  <svg
+                    x-show="!isOpen"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 8h16M4 16h16"
+                    />
+                  </svg>
+
+                  <svg
+                    x-show="isOpen"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div
+              x-cloak
+              :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0']"
+              class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
+            >
+              <div
+                class="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-y-0 lg:-px-8"
               >
-                03-5375070
-              </button>
-            </a>
+                <a
+                  class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
+                  href="index.html"
+                  >בית</a
+                >
+                <a
+                  class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
+                  href="index.html#about"
+                  >אודות</a
+                >
+                <a
+                  class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
+                  href="index.html#services"
+                  >שירותים</a
+                >
+                <a
+                  href="index.html#contact"
+                  class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline"
+                  >צרו קשר</a
+                >
+
+                <a href="tel:03-5375070">
+                  <button
+                    class="flex items-center justify-center px-5 py-2 text-sm font-medium tracking-wide text-center text-white capitalize transition-colors duration-300 transform bg-gray-700 rounded-lg hover:bg-gray-600 focus:outline-none focus:bg-gray-600 font-custom"
+                  >
+                    03-5375070
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </nav>
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">הצהרת נגישות</h1>
-    <p class="text-gray-600">אבי לוי משרד יועצי מס</p>
-  </header>
+        </nav>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">הצהרת נגישות</h1>
+        <p class="text-gray-600">אבי לוי משרד יועצי מס</p>
+      </header>
 
-  <div class="space-y-8 bg-white p-8 rounded-lg shadow-sm">
-    <!-- מחויבות לנגישות -->
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        מחויבות לנגישות
-      </h2>
-      <div class="prose text-gray-600">
-        <p class="mb-4">
-          אנו, במשרד אבי לוי יועצי מס (להלן: "המשרד"), רואים חשיבות עליונה
-          בהנגשת השירותים הניתנים באתר לכלל הציבור, ובפרט לאנשים עם
-          מוגבלויות. באתר זה נעשו מאמצים רבים ליישם את הוראות תקנות שוויון
-          זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), תשע"ג-2013, תקן
-          ישראלי 5568 ורמת AA של תקן WCAG 2.1 מטעם ארגון W3C הבינלאומי.
-        </p>
-        <p class="mb-4">
-          אנו מאמינים שהאינטרנט צריך להיות נגיש לכלל המשתמשים, ולכן אנו
-          פועלים באופן מתמיד כדי לשפר את חוויית המשתמש ונגישות האתר. במסגרת
-          מאמצים אלו, אנו עורכים בדיקות תקופתיות ומבצעים התאמות טכנולוגיות
-          ותוכניות, על מנת להבטיח את העמידה בהוראות החוק והתקנים הרלוונטיים.
-        </p>
-      </div>
-    </section>
+      <div class="space-y-8 bg-white p-8 rounded-lg shadow-sm">
+        <!-- מחויבות לנגישות -->
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            מחויבות לנגישות
+          </h2>
+          <div class="prose text-gray-600">
+            <p class="mb-4">
+              אנו, במשרד אבי לוי יועצי מס (להלן: "המשרד"), רואים חשיבות עליונה
+              בהנגשת השירותים הניתנים באתר לכלל הציבור, ובפרט לאנשים עם
+              מוגבלויות. באתר זה נעשו מאמצים רבים ליישם את הוראות תקנות שוויון
+              זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), תשע"ג-2013, תקן
+              ישראלי 5568 ורמת AA של תקן WCAG 2.1 מטעם ארגון W3C הבינלאומי.
+            </p>
+            <p class="mb-4">
+              אנו מאמינים שהאינטרנט צריך להיות נגיש לכלל המשתמשים, ולכן אנו
+              פועלים באופן מתמיד כדי לשפר את חוויית המשתמש ונגישות האתר. במסגרת
+              מאמצים אלו, אנו עורכים בדיקות תקופתיות ומבצעים התאמות טכנולוגיות
+              ותוכניות, על מנת להבטיח את העמידה בהוראות החוק והתקנים הרלוונטיים.
+            </p>
+          </div>
+        </section>
 
-    <!-- התאמות נגישות באתר -->
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        התאמות הנגישות באתר
-      </h2>
-      <div class="prose text-gray-600">
-        <p class="mb-4">
-          באתר הוטמעו התכונות וההתאמות הבאות, המיועדות לאפשר גלישה נוחה
-          ואפקטיבית לאנשים עם מוגבלויות:
-        </p>
-        <ul class="space-y-3">
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            תמיכה מלאה בניווט באמצעות מקלדת ומקשי קיצור לאזורים מרכזיים באתר
-          </li>
-          <!--              <li class="flex items-start">-->
-          <!--                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>-->
-          <!--                התאמה לשימוש בטכנולוגיות מסייעות כגון תוכנות קוראות מסך (NVDA,-->
-          <!--                JAWS)-->
-          <!--              </li>-->
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            אפשרות להגדלת טקסט עד 200% ללא פגיעה ברמת הקריאות או שבירת מבנה
-            האתר
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            התאמת ניגודיות הצבעים והגופנים בהתאם לרמת AA בתקן WCAG 2.1
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            תיוג כותרות, חלופות טקסט לתמונות ורכיבים חשובים נוספים
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            שימוש במבנה סמנטי תקין לרכיבי HTML כדי להקל על קוראי מסך
-          </li>
-        </ul>
-        <p class="mt-4">
-          נציין כי אף על פי שאנו משקיעים מאמצים רבים בנגישות האתר, ייתכן
-          שיימצאו חלקים מסוימים באתר שעודם אינם מותאמים במלואם. אם נתקלתם
-          בקושי בגלישה או בשימוש באתר – אנא דווחו לנו ונשמח לטפל בכך בהקדם.
-        </p>
-      </div>
-    </section>
+        <!-- התאמות נגישות באתר -->
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            התאמות הנגישות באתר
+          </h2>
+          <div class="prose text-gray-600">
+            <p class="mb-4">
+              באתר הוטמעו התכונות וההתאמות הבאות, המיועדות לאפשר גלישה נוחה
+              ואפקטיבית לאנשים עם מוגבלויות:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                תמיכה מלאה בניווט באמצעות מקלדת ומקשי קיצור לאזורים מרכזיים באתר
+              </li>
+              <!--              <li class="flex items-start">-->
+              <!--                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>-->
+              <!--                התאמה לשימוש בטכנולוגיות מסייעות כגון תוכנות קוראות מסך (NVDA,-->
+              <!--                JAWS)-->
+              <!--              </li>-->
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                אפשרות להגדלת טקסט עד 200% ללא פגיעה ברמת הקריאות או שבירת מבנה
+                האתר
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                התאמת ניגודיות הצבעים והגופנים בהתאם לרמת AA בתקן WCAG 2.1
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                תיוג כותרות, חלופות טקסט לתמונות ורכיבים חשובים נוספים
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                שימוש במבנה סמנטי תקין לרכיבי HTML כדי להקל על קוראי מסך
+              </li>
+            </ul>
+            <p class="mt-4">
+              נציין כי אף על פי שאנו משקיעים מאמצים רבים בנגישות האתר, ייתכן
+              שיימצאו חלקים מסוימים באתר שעודם אינם מותאמים במלואם. אם נתקלתם
+              בקושי בגלישה או בשימוש באתר – אנא דווחו לנו ונשמח לטפל בכך בהקדם.
+            </p>
+          </div>
+        </section>
 
-    <!-- הסדרי נגישות במשרד -->
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        הסדרי נגישות במשרד
-      </h2>
-      <div class="prose text-gray-600">
-        <p class="mb-4">
-          מעבר לפעולות שאנו נוקטים באתר האינטרנט, אנו דואגים גם לסביבת משרד
-          נגישה לקבלת קהל. להלן חלק מהסדרי הנגישות שהמשרד מספק ללקוחות עם
-          מוגבלות:
-        </p>
-        <ul class="space-y-3">
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            חניית נכים מסומנת ונגישה בסמוך לכניסה למשרד
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            גישה נוחה לכיסאות גלגלים (רמפה או מעלית לפי הצורך)
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            שירות בליווי כלב נחייה, בהתאם לחוק
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            אפשרות לקבלת שירות עם מתורגמן לשפת הסימנים (בתיאום מראש)
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            שירותים נגישים ומספקים מעברים רחבים לאנשים עם מוגבלות תנועה
-          </li>
-        </ul>
-      </div>
-    </section>
+        <!-- הסדרי נגישות במשרד -->
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            הסדרי נגישות במשרד
+          </h2>
+          <div class="prose text-gray-600">
+            <p class="mb-4">
+              מעבר לפעולות שאנו נוקטים באתר האינטרנט, אנו דואגים גם לסביבת משרד
+              נגישה לקבלת קהל. להלן חלק מהסדרי הנגישות שהמשרד מספק ללקוחות עם
+              מוגבלות:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                חניית נכים מסומנת ונגישה בסמוך לכניסה למשרד
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                גישה נוחה לכיסאות גלגלים (רמפה או מעלית לפי הצורך)
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                שירות בליווי כלב נחייה, בהתאם לחוק
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                אפשרות לקבלת שירות עם מתורגמן לשפת הסימנים (בתיאום מראש)
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                שירותים נגישים ומספקים מעברים רחבים לאנשים עם מוגבלות תנועה
+              </li>
+            </ul>
+          </div>
+        </section>
 
-    <!-- פרטי רכז הנגישות -->
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        פרטי רכז הנגישות
-      </h2>
-      <div class="bg-gray-50 p-6 rounded-lg">
-        <p class="text-gray-600 mb-2"><strong>שם:</strong> אבי לוי</p>
-        <p class="text-gray-600 mb-2">
-          <strong>תפקיד:</strong> רכז נגישות ובעלים
-        </p>
-        <p class="text-gray-600 mb-2"><strong>טלפון:</strong> 03-5375070</p>
-        <p class="text-gray-600">
-          <strong>דוא"ל:</strong>
-          <a
+        <!-- פרטי רכז הנגישות -->
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            פרטי רכז הנגישות
+          </h2>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <p class="text-gray-600 mb-2"><strong>שם:</strong> אבי לוי</p>
+            <p class="text-gray-600 mb-2">
+              <strong>תפקיד:</strong> רכז נגישות ובעלים
+            </p>
+            <p class="text-gray-600 mb-2">
+              <strong>טלפון:</strong>
+              <a href="tel:03-5375070" aria-label="טלפון ליצירת קשר">
+                <span class="text-blue-600 underline"> 03-5375070 </span>
+              </a>
+            </p>
+            <p class="text-gray-600">
+              <strong>דוא"ל:</strong>
+              <a
+                href="mailto:avi@avi-levi.co.il"
+                class="text-blue-600 underline"
+                >avi@avi-levi.co.il</a
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- משוב ופניות בנושא נגישות -->
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            משוב ופניות בנושא נגישות
+          </h2>
+          <div class="prose text-gray-600">
+            <p class="mb-4">
+              אנו מקפידים על מתן מענה אדיב, מכיל ומכבד לכל פנייה בנושא נגישות.
+              במידה ונתקלתם בכל בעיית נגישות, לקות או קושי בגלישה באתר או בקבלת
+              שירות במשרד – נשמח שתיידעו אותנו באמצעות אחד מדרכי ההתקשרות
+              המפורטים מטה, ונפעל לתיקון/שיפור ולטיפול מהיר בפנייתכם:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                <p class="text-gray-600 mb-2">
+                  <strong>טלפון:</strong>
+                  <a href="tel:03-5375070" aria-label="טלפון ליצירת קשר">
+                    <span class="text-blue-600 underline"> 03-5375070 </span>
+                  </a>
+                </p>
+              </li>
+
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
+                <strong>דוא"ל:</strong>
+                <a
                   href="mailto:avi@avi-levi.co.il"
                   class="text-blue-600 underline"
-          >avi@avi-levi.co.il</a
+                  >avi@avi-levi.co.il</a
+                >
+              </li>
+            </ul>
+            <p class="mt-4">
+              במידה שנדרשת לכם עזרה בהשלמת טפסים מקוונים או נדרשות התאמות
+              נוספות, אנו מזמינים אתכם ליצור עמנו קשר ואנו נעשה כל מאמץ לסייע.
+            </p>
+          </div>
+        </section>
+
+        <!-- תאריך עדכון ופרטים נוספים -->
+        <footer class="mt-12 pt-6 border-t border-gray-200">
+          <p class="text-sm text-gray-500">
+            <strong>תאריך עדכון הצהרת הנגישות:</strong> 1 בפברואר 2024
+          </p>
+          <p class="text-sm text-gray-500 mt-2">
+            הצהרה זו עודכנה לאחר ביצוע בדיקות נגישות מקיפות ומענה לדרישות חוק
+            שוויון זכויות לאנשים עם מוגבלות. אנו מתחייבים להמשיך ולקיים בדיקות
+            תקופתיות ולהשקיע משאבים לשיפור מתמיד של הנגישות באתר ובמשרד, בהתאם
+            להתקדמות הטכנולוגית ולצרכים העולים מהשטח.
+          </p>
+          <p class="text-sm text-gray-500 mt-2">
+            במידה שהנכם חווים קושי או יש לכם הצעות לשיפור בנושא נגישות, נשמח
+            לעמוד לרשותכם בכל עת. יחד נוכל ליצור חוויית גלישה ושירות שוויונית,
+            מכילה ונגישה לכל.
+          </p>
+          <div
+            class="container bg-greyNew flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row"
           >
-        </p>
-      </div>
-    </section>
+            <div class="text-sm text-white dark:text-gray-300">
+              <a href="/negishut.html" class="hover:underline">הצהרת נגישות</a>
+            </div>
+            <div class="flex -mx-2">
+              <a
+                href="https://www.facebook.com/profile.php?id=100057335564667"
+                class="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                aria-label="Facebook"
+              >
+                <svg
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
 
-    <!-- משוב ופניות בנושא נגישות -->
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        משוב ופניות בנושא נגישות
-      </h2>
-      <div class="prose text-gray-600">
-        <p class="mb-4">
-          אנו מקפידים על מתן מענה אדיב, מכיל ומכבד לכל פנייה בנושא נגישות.
-          במידה ונתקלתם בכל בעיית נגישות, לקות או קושי בגלישה באתר או בקבלת
-          שירות במשרד – נשמח שתיידעו אותנו באמצעות אחד מדרכי ההתקשרות
-          המפורטים מטה, ונפעל לתיקון/שיפור ולטיפול מהיר בפנייתכם:
-        </p>
-        <ul class="space-y-2">
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            <strong>טלפון:</strong> 03-5375070
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            <strong>פקס:</strong> 03-5375071
-          </li>
-          <li class="flex items-start">
-            <span class="w-2 h-2 bg-blue-500 rounded-full ml-2 mt-2"></span>
-            <strong>דוא"ל:</strong>
-            <a
-                    href="mailto:avi@avi-levi.co.il"
-                    class="text-blue-600 underline"
-            >avi@avi-levi.co.il</a
-            >
-          </li>
-        </ul>
-        <p class="mt-4">
-          במידה שנדרשת לכם עזרה בהשלמת טפסים מקוונים או נדרשות התאמות
-          נוספות, אנו מזמינים אתכם ליצור עמנו קשר ואנו נעשה כל מאמץ לסייע.
-        </p>
-      </div>
-    </section>
+            <p class="text-sm text-white dark:text-gray-300">
+              כל הזכויות שמורות אבי לוי משרד יועצי מס 2003©
+            </p>
 
-    <!-- תאריך עדכון ופרטים נוספים -->
-    <footer class="mt-12 pt-6 border-t border-gray-200">
-      <p class="text-sm text-gray-500">
-        <strong>תאריך עדכון הצהרת הנגישות:</strong> 1 בפברואר 2024
-      </p>
-      <p class="text-sm text-gray-500 mt-2">
-        הצהרה זו עודכנה לאחר ביצוע בדיקות נגישות מקיפות ומענה לדרישות חוק
-        שוויון זכויות לאנשים עם מוגבלות. אנו מתחייבים להמשיך ולקיים בדיקות
-        תקופתיות ולהשקיע משאבים לשיפור מתמיד של הנגישות באתר ובמשרד, בהתאם
-        להתקדמות הטכנולוגית ולצרכים העולים מהשטח.
-      </p>
-      <p class="text-sm text-gray-500 mt-2">
-        במידה שהנכם חווים קושי או יש לכם הצעות לשיפור בנושא נגישות, נשמח
-        לעמוד לרשותכם בכל עת. יחד נוכל ליצור חוויית גלישה ושירות שוויונית,
-        מכילה ונגישה לכל.
-      </p>
-    </footer>
-  </div>
-</main>
-</body>
+            <a href="#">
+              <img
+                class="w-auto h-20"
+                src="/assets/avilogowhite.png"
+                alt="לוגו משרד יועצי מס אבי לוי"
+              />
+            </a>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>

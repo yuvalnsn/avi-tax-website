@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         custom: ["ParagraphFont", "sans-serif"],
+        headerFont: ["YourCustomFontName", "sans-serif"],
       },
     },
   },
