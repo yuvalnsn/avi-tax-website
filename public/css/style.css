@@ -769,6 +769,10 @@ video {
   height: 1px;
 }
 
+.h-\[28rem\] {
+  height: 28rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -795,6 +799,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[28rem\] {
+  width: 28rem;
 }
 
 .max-w-2xl {
@@ -1745,6 +1753,48 @@ p, span, a, div {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+@media not all and (min-width: 640px) {
+  .max-sm\:h-48 {
+    height: 12rem;
+  }
+
+  .max-sm\:h-60 {
+    height: 15rem;
+  }
+
+  .max-sm\:h-72 {
+    height: 18rem;
+  }
+
+  .max-sm\:h-80 {
+    height: 20rem;
+  }
+
+  .max-sm\:h-96 {
+    height: 24rem;
+  }
+
+  .max-sm\:w-48 {
+    width: 12rem;
+  }
+
+  .max-sm\:w-60 {
+    width: 15rem;
+  }
+
+  .max-sm\:w-72 {
+    width: 18rem;
+  }
+
+  .max-sm\:w-80 {
+    width: 20rem;
+  }
+
+  .max-sm\:w-96 {
+    width: 24rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:h-20 {
     height: 5rem;
@@ -1754,8 +1804,24 @@ p, span, a, div {
     height: 28rem;
   }
 
+  .sm\:h-\[14rem\] {
+    height: 14rem;
+  }
+
+  .sm\:h-\[24rem\] {
+    height: 24rem;
+  }
+
   .sm\:w-\[28rem\] {
     width: 28rem;
+  }
+
+  .sm\:w-\[14rem\] {
+    width: 14rem;
+  }
+
+  .sm\:w-\[24rem\] {
+    width: 24rem;
   }
 
   .sm\:flex-row {
